@@ -185,7 +185,7 @@ class MybatisPlusApplicationTests {
     //测试逻辑删除
     @Test
     public  void test15(){
-        userMapper.deleteById(16);
+        userMapper.deleteById(18);
         List<com.example.mybatisplus.entity.user> users = userMapper.selectList(null);
         users.forEach(System.out::println);
     }

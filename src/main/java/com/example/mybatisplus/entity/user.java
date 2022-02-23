@@ -1,9 +1,6 @@
 package com.example.mybatisplus.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.Version;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,7 +29,9 @@ public class user {
     @TableField(fill = FieldFill.UPDATE)
     private   Date  updateTime;
     @Version
-    private  int version;
+    @TableField(fill = FieldFill.INSERT)
+    private  Integer version;
+    @TableLogic
     private  int deleted;
 
 }
